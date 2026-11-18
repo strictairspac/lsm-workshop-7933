@@ -32,6 +32,7 @@ services:
       REDIS_URL: redis://redis:6379/0
       JWT_SECRET: ${JWT_SECRET:-local-demo-lsm-workshop-change-before-production-20261117}
       SEED_DEMO: ${SEED_DEMO:-true}
+      ARTIFACT_ROOT: ${ARTIFACT_ROOT:-/artifacts}
     ports: ["${BACKEND_PORT:-19245}:8000"]
     volumes: ["artifacts:/artifacts"]
     depends_on:
